@@ -593,9 +593,9 @@ If you would like help planning your trip or have someone handle the planning fo
         const min = now.getMinutes();
         const sec = now.getSeconds();
         const week = now.getDay();
-        const weekItems = ["日", "月", "火", "水", "木", "金", "土"];
+        const weekItems = ["mon", "tues", "wed", "thurs", "fri", "sat", "sun"];
         const dayOfWeek = weekItems[week];
-        const s = year + "年" + mon + "月" + day + "日" +"("+dayOfWeek +") "+ hour + ":" + min + ":" + sec; 
+        const s = year + "/" + mon + "/" + day + "" +"("+dayOfWeek +") "+ hour + ":" + min + ":" + sec; 
         return s;
       }
 	</script>
