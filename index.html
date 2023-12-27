@@ -71,6 +71,7 @@
 						<!-- <a href="index.html"><img src="images/logo1.jpg" alt="サンプル"  width="-20" height=""></a> -->
 						</div>
 					</div>
+					<div id="time" align="right"></div>
 					<div class="col-xs-10 text-right menu-1 main-nav">
 						<ul>
 							<li class="active"><a href="#" data-nav-section="home">Home</a></li>
@@ -576,7 +577,28 @@ If you would like help planning your trip or have someone handle the planning fo
 	<script src="js/magnific-popup-options.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
+	
+		 <script type="text/javascript">
+       timerID = setInterval('clock()',500);
+       function clock() {
+        document.getElementById("time").innerHTML = getNow();
+      }
 
+      function getNow() {
+        const now = new Date();
+        const year = now.getFullYear();
+        const mon = now.getMonth()+1;
+        const day = now.getDate();
+        const hour = now.getHours();
+        const min = now.getMinutes();
+        const sec = now.getSeconds();
+        const week = now.getDay();
+        const weekItems = ["日", "月", "火", "水", "木", "金", "土"];
+        const dayOfWeek = weekItems[week];
+        const s = year + "年" + mon + "月" + day + "日" +"("+dayOfWeek +") "+ hour + ":" + min + ":" + sec; 
+        return s;
+      }
+	</script>
 </body>
 </html>
 
