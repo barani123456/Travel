@@ -570,7 +570,7 @@ If you have an unexpected injury or medical condition, your ETA will refer you t
 					var min = ('0' + now.getMinutes()).slice(-2);
 					var sec = ('0' + now.getSeconds()).slice(-2);
 					var week = now.getDay();
-					var weekItems = ["mon", "tues", "wed", "thurs", "fri", "sat", "sun"];
+					var weekItems = ["sun", "mon", "tues", "wed", "thurs", "fri", "sat"];
 					var dayOfWeek = weekItems[week];
 					var s = year + "/" + mon + "/" + day + " " +"("+dayOfWeek +") "+ hour + ":" + min + ":" + sec; 
 					return s;
